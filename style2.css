@@ -27,23 +27,25 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.Navegador {
-  display: flex;
-  gap: 2rem; 
-  align-items: center;
+.Navegador{
+    padding: 10px; 
+    font-family: serif;
+    font-size: 30px;
+    display: flex;
+    margin-left: auto;
+    margin-right: 4%;
+    text-align: center;
+    gap: 20px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
-
-.Navegador a {
-  text-decoration: none;
-  font-weight: 500;
-  color: #1d1d1f;
-  transition: 0.3s;
+.Navegador p:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: ease 0.1s;
+    color: black;
 }
-
-.Navegador a:hover {
-  color: #0071e3;
-}
-
 
 
 
