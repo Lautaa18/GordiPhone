@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortiPhone - Contacto</title>
+    <link rel="icon" href="imagenes/portiphone logo.jpeg">
+    <link rel="stylesheet" href="Style/style3.css">
+</head>
+<body>
+    <header class="Header">
+        <h1 class="TituloPag">PortiPhone</h1>
+        <img class="logo" src="imagenes/portiphone logo.jpeg" alt="Logo de PortiPhone" width="100" height="100" title="Logo de PortiPhone">
+        <nav class="Navegador">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
+
+    </header>
+
+    <main>
+        <section class="contacto-caja">
+            <div class="contacto-header">
+                <h1>Contacto</h1>
+                <p>Pasá el mouse para desplegar el formulario</p>
+            </div>
+
+            <div class="contacto-contenido">
+                <p>llene el siguiente formulario si desea ser contactado:</p>
+                <p>Sino haga click en los botones de la parte inferior</p>
+
+                <form>
+                    
+  <fieldset>
+    <legend>Formulario de contacto</legend>
+
+    <label for="nombre">Nombre</label>
+    <input type="text" name="Nombre" id="Nombre" required><br>
+
+    <label for="email">Correo electrónico</label>
+    <input type="email" name="Correo" id="Correo" required><br>
+
+    <label for="mensaje">Mensaje</label><br>
+    <textarea id="mensaje" rows="5" placeholder="Escriba su consulta..."></textarea><br>
+
+    <div class="botones">
+      <input type="submit" value="Enviar datos">
+      <input type="reset" value="Borrar datos">
+    </div>
+  </fieldset>
