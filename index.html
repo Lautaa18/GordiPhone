@@ -11,18 +11,23 @@
 </head>
 <body>
     <header class="Header">
-      <h1 class="TituloPag">Gordiphone<a></a></h1>
-      <a href="index.html">
-        <img class="logo" src="imagenes/GordiPhone.png" alt="Logo de gordiPhone" width="100" height="100" title="Logo de PortiPhone"></a>
-        
-     
-     <nav class="Navegador">
-        <a href="index.html"><p>Inicio</p></a>
-        <a href="productos.html"><p>Productos</p></a>
-        <a href="contacto.html"><p>Contacto</p></a>
-        <a href="galeriaProductos.html">Galeria</a>
-    </nav>
+  <div class="header-left">
+    <a href="index.html">
+      <img class="logo" src="imagenes/GordiPhone.png" alt="Logo GordiPhone">
+    </a>
+    <h1 class="TituloPag">GordiPhone</h1>
+  </div>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav class="Navegador" id="navMenu">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="galeriaProductos.html">Galería</a>
+  </nav>
 </header>
+
     <section class="overlay">
 
     </section>
@@ -91,7 +96,13 @@
 <footer class="footer">
 <p>©2025 PortiPhone. Todo lo relacionado a Apple.</p>
 </footer>
-    
+    <script>
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  }
+</script>
+
 </body>
-<script src="JS/index.js"></script>
+
 </html>
