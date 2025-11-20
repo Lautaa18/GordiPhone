@@ -1,39 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <div>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gordi phone - Inicio</title>
-    <link rel="icon" href="imagenes/GordiPhone.png">
-    <link rel="stylesheet" href="Style/style4.css">
-    </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería Apple</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f7;
+    }
+
+    /* HEADER */
+    header {
+      background: #000;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background: #111;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 8px 0;
+    }
+
+    .menu-btn {
+      background: transparent;
+      border: 2px solid #fff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* GALLERY SECTION */
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-    <header class="Header">
-      <h1 class="TituloPag">Gordi phone<a></a></h1>
-      <a href="index.html">
-        <img class="logo" src="imagenes/GordiPhone.png" alt="Logo de gordiPhone" width="100" height="100" title="Logo de PortiPhone"></a>
-        
-     
-     <nav class="Navegador">
-        <a href="index.html"><p>Inicio</p></a>
-        <a href="productos.html"><p>Productos</p></a>
-        <a href="contacto.html"><p>Contacto</p></a>
-        <a href="galeriaProductos.html">Galeria</a>
+  <header>
+    <div class="logo">GortiPhone</div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav id="navMenu">
+      <a href="#home">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
     </nav>
-    <div class="row">
-        <div class="column">
-            <img src="imagenes/watch series.webp" alt="Imagen 1" style="width:100%">
-            <img src="imagenes/AirPods_Pro_2nd-Gen-1.png" alt="Imagen 2" style="width:100%">
-            <img src="imagenes/apple-macbook-air-2022-m2_yqte.1920.webp" alt="Imagen 3" style="width:100%">
-            <img src="imagenes/apple-iphone-16-pro-max-2.webp" alt="" style="width:100%">
-         </div>
-            <div class="column">
-                <img src="imagenes/Iphone15.webp" alt="Imagen 4" style="width:100%">
-                <img src="imagenes/iphone17,promax.webp" alt="Imagen 5" style="width:100%">
-                <img src="imagenes/ipad pro.webp" alt="Imagen 6" style="width:100%">
-                <img src="imagenes/Cargador.original.jpg alt="Imagen 7" style="width:100%">
-            </div>
+  </header>
+
+  <section id="galeria">
+    <h2>Galería de Productos Apple</h2>
+    <p>Descubre nuestros modelos de iPhones y accesorios premium.</p>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="iPhone" />
+      <img src="https://images.unsplash.com/photo-1567581935884-3349723552ca" alt="AirPods" />
+      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Accesorio Apple" />
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="MacBook" />
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Apple Watch" />
+      <img src="https://images.unsplash.com/photo-1588064649190-3ec746d3c5a9" alt="iPhone Moderno" />
+      <img src="https://images.unsplash.com/photo-1580894908361-967195033dcd" alt="iPad Pro" />
+      <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20" alt="Setup Apple" />
     </div>
-</header>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+  </script>
+</body>
+</html>
+                
